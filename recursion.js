@@ -12,7 +12,7 @@ while (n <= 10) {
 const countToTen = (n) => {
   //Establish number variable
   while(n < 11){
-    console.log(n);
+    console.log('While Loop', n);
     n++;
     return countToTen(n);
   }
@@ -34,9 +34,19 @@ const factorial = n => {
   return result;
 };
 
-console.log(factorial(5));
+// console.log(factorial(5));
 
 // write the above function in a recursive way.
 
+
+const recursiveFactorial = (n) => {
+  if(n<0){
+    return "Please enter a positive integer";
+  }
+  if(n>=1){
+    return (n * recursiveFactorial(n-1));
+  }
+  return n;
+}
 // when your code is ready, un-comment the next line and run the file
-// console.log(recursiveFactorial());
+console.log(recursiveFactorial(5));
